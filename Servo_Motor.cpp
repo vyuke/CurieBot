@@ -136,7 +136,7 @@ void Servo_Motor::turnLeft(float angle, int speed)
     newAngle = getHeading();
     newAngle = newAngle - ((micros() - calibrateStartTime) / _calibrationTime);
 #ifdef DEBUG
-    Serial.println(newAngle);
+    Serial.println(newAngle);  //调试串口输出新的角度数据
 #endif
     if ((newAngle < oldAngle) && (oldAngle - newAngle > OFFSETANGLE2)) newAngle = newAngle + 360;
   }
@@ -146,7 +146,7 @@ void Servo_Motor::turnLeft(float angle, int speed)
   stop();
 }
 
-void Servo_Motor::turnLeft(float angle)
+void Servo_Motor::turnLeft(float angle)//有且仅有一个角度参数则以100的速度左转
 {
   turnLeft(angle, 100);
 }
@@ -173,12 +173,12 @@ void Servo_Motor::turnRight(float angle, int speed)
   stop();
 }
 
-void Servo_Motor::turnRight(float angle)
+void Servo_Motor::turnRight(float angle) //有且仅有一个角度参数则以100的速度右转
 {
   turnRight(angle, 100);
 }
 
-void Servo_Motor::turnLeft()
+void Servo_Motor::turnLeft()//没有角度参数
 {
   motorL(-100);
   motorR(100);
