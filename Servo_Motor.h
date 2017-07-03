@@ -17,7 +17,7 @@
 #define RUNNING true
 #define STOP false
 
-#define OFFSETANGLE1 0
+#define OFFSETANGLE1 0    //校准值？补偿？
 #define OFFSETANGLE2 10
 
 #define CALNUM 3
@@ -37,10 +37,10 @@ public:
   void setDirectionR(bool direction);
   void backrun(int speed);
   void turnLeft(float angle,int speed);
-  void turnRight(float angle,int speed);
   void turnLeft(float angle);
-  void turnRight(float angle);
   void turnLeft();
+  void turnRight(float angle,int speed);
+  void turnRight(float angle);
   void turnRight();
   void brake();
   float getHeading();
