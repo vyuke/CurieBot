@@ -1,6 +1,8 @@
 #include "Servo_Motor.h"
-unsigned long microsPerReading, microsPrevious;
-Servo_Motor sm(13,12);
+#define Left_wheel 2  //声明左轮连接2号口
+#define Right_wheel 3  //声明右轮链接3号口
+
+Servo_Motor sm(Left_wheel,Right_wheel);
 
 void setup(){
 //  Serial.begin(115200);
@@ -20,41 +22,9 @@ void setup(){
   sm.turnRight(90);
 
   sm.stop();
-  
-  
-//Serial.begin(115200);
-//  while(!Serial);
-//  delay(2000);
-//  sm.calibrate();
-//  Serial.println("3");
-//  delay(1000);
-//  Serial.println("2");
-//  delay(1000);
-//  Serial.println("1");
-//  delay(1000);
-//  Serial.println("gogog90");
-//  sm.turnLeft(90);
-//  Serial.println("3");
-//  delay(1000);
-//  Serial.println("2");
-//  delay(1000);
-//  Serial.println("1");
-//  delay(1000);
-//  Serial.println("gogog90");
-//  sm.turnRight(90);
-  
 }
 
-void loop(){
-//    unsigned long microsNow;
-//  microsNow = micros();
-//  if (microsNow - microsPrevious >= microsPerReading) {
-//    float newAngle = sm.getHeading();
-//    Serial.println(newAngle);
-    
-//microsPrevious = microsPrevious + microsPerReading;
-//  }
-  
-//   sm.run(100);
-//   delay(1000);
-  }
+void loop()
+{
+
+}
