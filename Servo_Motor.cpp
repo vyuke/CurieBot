@@ -257,4 +257,15 @@ float Servo_Motor::convertRawGyro(int gRaw) {
   return g;
 }
 
-
+bool Servo_Motor::left_Sensor_index()
+{
+  return digitalRead(14);
+  }
+  bool Servo_Motor::mid_Sensor_index()
+{
+  return digitalRead(15);
+  }
+  bool Servo_Motor::right_Sensor_index()
+{
+  return digitalRead(16);
+  }

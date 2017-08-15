@@ -44,6 +44,10 @@ public:
   void turnRight();
   void brake();
   float getHeading();
+  bool left_Sensor_index();//左边巡线传感器信号
+  bool mid_Sensor_index();//中间巡线传感器信号
+  bool right_Sensor_index();//右边巡线传感器信号
+  
 private:
   Servo servoL;
   Servo servoR;
