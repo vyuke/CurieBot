@@ -23,6 +23,10 @@ void setup()
   digitalWrite(7, !0);
   digitalWrite(6, !1);
   delay(1000);
+ 
+  tone(13, 3000);//板载蜂鸣器发出频率为3000Hz的声音
+  delay(500);
+  noTone(13);
 
   sm.calibrate();//校准
 

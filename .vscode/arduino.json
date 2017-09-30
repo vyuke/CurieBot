@@ -1,0 +1,5 @@
+{
+    "board": "Intel:arc32:arduino_101",
+    "port": "/dev/cu.usbmodem1421",
+    "sketch": "CurieBot_library/examples/CurieBot_Self_test/CurieBot_Self_test.ino"
+}
